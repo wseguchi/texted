@@ -1,7 +1,7 @@
 import os
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 from readability import readability, count_letters, count_words, count_sentences
-from similarity import calcula_assinatura, compara_assinatura
+from similarity import calcula_assinatura, compara_assinatura 
 
 # Configure application
 app = Flask(__name__)

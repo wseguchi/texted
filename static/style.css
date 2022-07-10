@@ -1,0 +1,260 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#container {
+    margin: 0px auto;
+}
+
+#header {
+    position: absolute;
+    background-image: url('../images/header-bg-desktop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 38.35%;
+    align-items: center;
+    text-align: center;
+}
+
+#header-wrap {
+    position: absolute;
+    top: 0px;
+    _border: solid 5px tomato;
+    width: calc(100% - 20px);
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    padding: 10px 5%;
+    color: white;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+#logo {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.ed {
+    color: #FAE0B1;
+}
+
+.ed-strong {
+    color: #f3b43f;
+}
+
+#links {
+    width: 100%;
+    text-align: left;
+    padding-left: 10%;
+}
+
+#links span {
+    margin: auto 10px;
+}
+
+#contact button {
+    background-color: white;
+    color: #6426dd;
+    text-transform: uppercase;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+#header-main-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    height: calc(100% - 64px);
+}
+
+#header-main-content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+#header-main-content-image img {
+    margin-right: 40px;
+    width: 460px;
+    height: auto;
+}
+
+#header-main-content-image {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 40px;
+    height: 100%;
+    align-items: center;
+}
+
+#main-input {
+    margin-top: 50px;
+    color: #404040;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+#main-input-selector-options {
+    width: 600px;
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#f2f2f2;
+    font-size: .9;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #999;
+    cursor: pointer;
+}
+
+#main-input-text {
+    display: flex;
+    width: 80%;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+#main-input-textbox-1,
+#main-input-textbox-2
+ {
+    width: 100%;
+}
+#text-input-form-01,
+#text-input-form-02 {
+	margin: auto;
+    width: 100%;
+    height: 300px;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 300;
+    font-size: 1rem;
+	background-color: #f2f2f2;
+    padding: 10px;
+    overflow: scroll;
+    border-radius: 5px;
+}
+
+.input-selector {
+    align-items: center;
+    padding: 15px;
+}
+
+.input-selector:hover {
+    background-color: #6426dd;
+    color: white;
+}
+
+.border-radius-left {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.border-radius-right {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.border-right {
+    border-right: 1px solid #999;
+}
+
+.subtitle {
+    font-size: .8em;
+}
+.light-white {
+    color: #D8C9F7;
+}
+
+.strong-purple {
+    color: #4d1cb0;
+}
+
+.btn-green {
+    width: 150px;
+    /*background-color: #3C8F7C;*/
+    background-color: #00dadc;
+}
+
+.btn-green:hover {
+    background-color: #00fbff;
+}
+
+.round-steps {
+    background-color: #fceccf;
+    padding: 5px 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 1440px) {
+
+    #header-main-content-image img {
+        margin-right: 40px;
+        width: 420px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+
+    #header-main-content-image img {
+        margin-right: 20px;
+        width: 380px;
+    }
+}
+
+@media only screen and (max-width: 1120px) {
+
+    #header-main-content-image img {
+        margin-right: 20px;
+        width: 340px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+
+    #header-main-content-image img {
+        margin-right: 20px;
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+
+    #header-main-content-image img {
+        margin-right: 20px;
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+
+    #header-main-content-image {
+        display: none;
+    }
+}
