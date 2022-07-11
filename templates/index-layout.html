@@ -6,88 +6,105 @@
     <meta name="description" content="Text and readability app">
     <meta name="keywords" content="education, text, read, readability, similarity, school, homework, lexical, coleman liau">
     <meta name="author" content="Wildson Seguchi">
-
     <link rel="stylesheet" href="../static/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@300;500&family=Questrial&display=swap" rel="stylesheet">
-    
     <script src="./static/script.js" defer></script>
-
     <title>Text(ed) - Evaluate your text!</title>
   </head>
-
   <body>
     <div id="container">
-        <div id="header">
-            <div id="header-wrap">
-                <nav>
-                    <div id="logo">
-                        text(<span class="ed">ed</span>)
-                    </div>
-                    <div id="links">
-                        <span>Home</span>
-                        <span>Method</span>
-                        <span>About</span>
-                    </div>
-                    <div id="contact">
-                        <button>Contact</button>
-                    </div>
-                </nav>
-                <div id="header-main-content">
-                    <div id="header-main-content-text">
-                        <h1><span class="light-white">Welcome to </span>Text(<span class="ed">ed</span>)</h1>
-                        <div>Check the <strong>readability</strong> and <strong>similarity</strong> of your texts</div>
-                        <button class="btn-green">Try now!</button>
-                    </div>
-                    <div id="header-main-content-image">
-                        <img src="../images/books-main.svg" alt="Book with a lamp">
-                    </div>
-                </div>
-                    <div id="main-input">
-                        <div id="main-input-title">
-                            <h1><span class="strong-purple">Text(</span><span class="ed-strong">ed</span><span class="strong-purple">) is fast and simple to use!</span></h1>
-                        </div>
-                        <div id="main-input-selector">
-                            <h3><span class="round-steps">1</span> Select you option:</h3>
-                        </div>
-                        <div id="main-input-selector-options">
-                            <div id="main-input-selector-options-readability" class="input-selector border-right border-radius-left">
-                                <strong>READABILITY</strong><br>
-                                <span class="subtitle">of one text</span>
-                            </div>
-                            <div id="main-input-selector-options-similarity" class="input-selector border-radius-right">
-                                <strong>READABILITY & SIMILARITY</strong><br>
-                                <span class="subtitle">between two texts</span>
-                            </div>
-                        </div>
-                        <div id="main-input-selector">
-                            <h3><span class="round-steps">2</span> Type or copy-paste your text:</h3>
-                        </div>
-                        <div id="main-input-text">
-                            <div id="main-input-textbox-1">
-                                <textarea id="text-input-form-01" class="form-control text-input" name="text_input" placeholder="Type in or paste the text you want to check..."></textarea>
-                            </div>
-                            <div id="main-input-textbox-2">
-                                <textarea id="text-input-form-02" class="form-control text-input" name="text_input" placeholder="Type in or paste the second text you want to check..."></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="method">
-
-                    </div>
-                    <div id="about-contact">
-
-                    </div>
-                    <div id="footer">
-                        
-                    </div>
-        
+      <div id="header">
+        <div id="header-wrap">
+          <nav>
+            <div id="logo">
+              text(<span class="ed">ed</span>)
             </div>
+            <div id="links">
+              <span>Home</span>
+              <span>Method</span>
+              <span>About</span>
+            </div>
+            <div id="contact">
+              <button>Contact</button>
+            </div>
+          </nav>
+          <div id="header-main-content">
+            <div id="header-main-content-text">
+              <h1><span class="light-white">Welcome to </span>Text(<span class="ed">ed</span>)</h1>
+              <div>Check the <strong>readability</strong> and <strong>similarity</strong> of your texts</div>
+              <button class="btn-green">Try now!</button>
+            </div>
+            <div id="header-main-content-image">
+              <img src="../images/books-main.svg" alt="Book with a lamp">
+            </div>
+          </div>
+          <div id="main-input">
+            <div id="main-input-title">
+              <h1><span class="strong-purple">Text(</span><span class="ed-strong">ed</span><span class="strong-purple">) is fast and simple to use!</span></h1>
+            </div>
+            <div id="main-input-selector">
+              <h3><span class="round-steps">1</span> Select you option:</h3>
+            </div>
+            <div id="main-input-selector-options">
+              <div id="main-input-selector-options-readability" class="input-selector border-right border-radius-left">
+                <strong>READABILITY</strong><br>
+                <span class="subtitle">of one text</span>
+              </div>
+              <div id="main-input-selector-options-similarity" class="input-selector border-radius-right">
+                <strong>READABILITY & SIMILARITY</strong><br>
+                <span class="subtitle">between two texts</span>
+              </div>
+            </div>
+            <div id="main-input-selector">
+              <h3><span class="round-steps">2</span> Type or copy-paste your text:</h3>
+            </div>
+            <div id="main-input-text">
+              <div id="main-input-textbox-1">
+                <textarea id="text-input-form-01" class="form-control text-input" name="text_input" placeholder="Type in or paste the text you want to check..."></textarea>
+              </div>
+              <div id="main-input-textbox-2">
+                <textarea id="text-input-form-02" class="form-control text-input" name="text_input" placeholder="Type in or paste the second text you want to check..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div id="method-similarity-bg-top"><img class="img-100" src="../images/method-bg-top.png"></div>
+          <div id="method">
+            <div id="method-readability">
+              <div id="method-readability-title">
+                <h1>Readability</h1>
+              </div>
+              <div id="method-readability-text" class="text-card">
+                <div class="text-card-subtitle">Readability refers to the ease with which text can be read and understood.</div>
+                Readability formulas are often used to assess the difficulty of text.
+                These formulas use mathematical calculations to produce a score.
+                <a href="http://www.clearlanguagegroup.com/readability/" target="_blank" title="Learn More"><img src="../images/external-link.png"></a>
+                </br></br>Higher scores mean lower reading ease or lower readability.
+                </br></br>This app calculates the score according to the <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank" title="Learn More">Coleman–Liau Index</a>.
+              </div>
+            </div>
+            <div id="method-similarity">
+              <div id="method-similarity-title">
+                <h1>Similarity</h1>
+              </div>
+              <div id="method-similarity-text" class="text-card">
+                <div class="text-card-subtitle">Similarity refers to how "close" two pieces of text are.</div>
+                Measuring the similarity is of key importance in several natural processing applications including information retrieval, book recommendation, news categorization and essay scoring.
+                <a href="https://www.aclweb.org/anthology/P18-1218.pdf" target="_blank" title="Learn More"><img src="../images/external-link.png"></a>
+                </br></br>The texts can be similar in a) meaning or b) surface closeness. The first is referred to as <strong>semantic similarity</strong> and the latter is referred to as <strong>lexical similarity</strong>.
+                </br></br>This app evaluates the <a href="https://kavita-ganesan.com/what-is-text-similarity/#.Xx88PBNKh0w" target="_blank" title="Learn More">Lexical Similarity</a>.
+              </div>
+            </div>
+          </div>
+          <div id="method-similarity-bg-bottom"><img class="img-100" src="../images/method-bg-bottom.png"></div>
+          <div id="about-contact">
+          </div>
+          <div id="footer">
+          </div>
         </div>
-
+      </div>
     </div>
   </body>
 </html>
