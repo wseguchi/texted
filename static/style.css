@@ -219,12 +219,9 @@ button {
 
 }
 
-#method-similarity-bg-top {
+#method-bg-top,
+#method-bg-bottom {
 	display: flex;
-}
-
-#method-similarity-bg-bottom {
-    display: flex;
 }
 
 .mt{
@@ -249,20 +246,54 @@ button {
 
 #about-contact {
 	width: 100%;
-	height: 700px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px 50px;
+	gap: 50px;
 	background-image: url('../images/about-contact-bg.png');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
+#about {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+#footer-bg {
+	display: flex;
+}
+
 #footer {
 	width: 100%;
-	height: 187px;
-	background-image: url('../images/footer-bg.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: right bottom;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 30px 0px;
+	background-image: linear-gradient(#6426dd,#44189a);
+	color: #D8C9F7;
+}
 
+#copyright {
+	font-family: 'Inconsolata', monospace;
+	font-size: .8em;
+}
+
+#license {
+	margin-top: 50px;
+	font-size: .8em;
+}
+.license-text {
+	font-family: 'Inconsolata', monospace;
+	font-size: .8em;
 }
 
 .img-100 {
@@ -335,6 +366,44 @@ button {
 	border-radius: 50%;
 	margin-right: 10px;
 }
+
+
+
+/* CONTACT form */
+
+input[type=text], select, textarea {
+	width: 100%; /* Full width */
+	padding: 12px; /* Some padding */ 
+	border: 1px solid #ccc; /* Gray border */
+	border-radius: 4px; /* Rounded borders */
+	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+	margin-bottom: 16px; /* Bottom margin */
+	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+	background-color: #04AA6D;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+	background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+  }
+
 
 
 
