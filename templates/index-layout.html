@@ -10,8 +10,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@300;500&family=Questrial&display=swap" rel="stylesheet">
-    <script src="./static/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500&family=Poppins:wght@300;500&family=Questrial&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
     <title>Text(ed) - Evaluate your text!</title>
   </head>
   <body>
@@ -72,30 +72,53 @@
           </div>
           <div id="method-similarity-bg-top"><img class="img-100" src="../images/method-bg-top.png"></div>
           <div id="method">
-            <div id="method-readability">
-              <div id="method-readability-title">
-                <h1>Readability</h1>
+            <div id="method-title">
+              <div id="method-title-readability" class="mt mt-active" onclick="changeMethodVisibility('readability')">
+                <h1>(<span id="method-title-span-readability" class="ed">read</span>)ability</h1>
               </div>
-              <div id="method-readability-text" class="text-card">
-                <div class="text-card-subtitle">Readability refers to the ease with which text can be read and understood.</div>
-                Readability formulas are often used to assess the difficulty of text.
-                These formulas use mathematical calculations to produce a score.
-                <a href="http://www.clearlanguagegroup.com/readability/" target="_blank" title="Learn More"><img src="../images/external-link.png"></a>
-                </br></br>Higher scores mean lower reading ease or lower readability.
-                </br></br>This app calculates the score according to the <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank" title="Learn More">Coleman–Liau Index</a>.
+              <div id="method-title-similarity" class="mt mt-inactive" onclick="changeMethodVisibility('similarity')">
+                <h1>(<span id="method-title-span-similarity" class="">similar</span>)ity</h1>
               </div>
             </div>
-            <div id="method-similarity">
-              <div id="method-similarity-title">
-                <h1>Similarity</h1>
-              </div>
-              <div id="method-similarity-text" class="text-card">
-                <div class="text-card-subtitle">Similarity refers to how "close" two pieces of text are.</div>
-                Measuring the similarity is of key importance in several natural processing applications including information retrieval, book recommendation, news categorization and essay scoring.
-                <a href="https://www.aclweb.org/anthology/P18-1218.pdf" target="_blank" title="Learn More"><img src="../images/external-link.png"></a>
-                </br></br>The texts can be similar in a) meaning or b) surface closeness. The first is referred to as <strong>semantic similarity</strong> and the latter is referred to as <strong>lexical similarity</strong>.
-                </br></br>This app evaluates the <a href="https://kavita-ganesan.com/what-is-text-similarity/#.Xx88PBNKh0w" target="_blank" title="Learn More">Lexical Similarity</a>.
-              </div>
+            <div id="method-text">
+                <div id="method-text-readability" class="text-card">
+                    <div class="text-card-subtitle">
+                        <span class="ed">Readability</span> refers to the ease with which text can be read and understood.
+                    </div>
+                    <p>
+                        Readability formulas are often used to assess the <strong>difficulty</strong> of text.
+                    </p>
+                    <p>
+                        These formulas use mathematical calculations to produce a score. The score shows the relative difficulty on a continuum from easy (grade five or lower) to very hard (college level and above). <strong>Higher scores mean lower reading ease or lower readability.</strong>
+                        <a href="http://www.clearlanguagegroup.com/readability/" target="_blank" title="Learn More"><img src="../images/external-link.png"></a>
+                    </p>
+                    <p>
+                        This app calculates the score according to the <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank" title="Learn More">Coleman–Liau Index</a>:
+                    </p>
+                    <p>
+                        The Coleman–Liau index is a readability test designed by Meri Coleman and T. L. Liau to gauge the understandability of a text. Like the Flesch–Kincaid Grade Level, Gunning fog index, SMOG index, and Automated Readability Index, <strong>its output approximates the U.S. grade level thought necessary to comprehend the text.</strong>
+                        <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank" title="Learn More"><img src="../images/external-link.png"></a>
+                    </p>
+                  </div>
+                
+                  <div id="method-text-similarity" class="text-card mt-hide">
+                    <div class="text-card-subtitle">
+                        <span class="ed">Similarity</span> refers to how "close" two pieces of text are.
+                    </div>
+                    <p>
+                        Measuring the similarity is of key importance in several natural processing applications including information retrieval, book recommendation, news categorization and essay scoring.
+                        <a href="https://www.aclweb.org/anthology/P18-1218.pdf" target="_blank" title="Learn More"><img src="../images/external-link.png"></a>
+                    </p>    
+                    <p>
+                        The texts can be similar in a) meaning or b) surface closeness. The first is referred to as <strong>semantic similarity</strong> and the latter is referred to as <strong>lexical similarity</strong>.
+                    </p>
+                    <p>    
+                        This app evaluates the <a href="https://kavita-ganesan.com/what-is-text-similarity/#.Xx88PBNKh0w" target="_blank" title="Learn More">Lexical Similarity</a>:
+                    </p>
+                    <p>
+                        It means how similar two pieces of text are at the surface level. For example, how similar are the phrases <strong>“the cat ate the mouse”</strong> with <strong>“the mouse ate the cat food”</strong> by just looking at the words?  On the surface, if you consider only word level similarity, these two phrases appear very similar as 3 of the 4 unique words are an exact overlap. <strong> This notion of similarity does not take into account the actual meaning behind words or the entire phrase in context.</strong>
+                    </p>
+                    </div>
             </div>
           </div>
           <div id="method-similarity-bg-bottom"><img class="img-100" src="../images/method-bg-bottom.png"></div>
