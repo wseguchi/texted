@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500&family=Poppins:wght@300;500&family=Questrial&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/56cc913de5.js" crossorigin="anonymous"></script>
     <script src="../static/script.js" defer></script>
     <title>Text(ed) - Evaluate your text!</title>
   </head>
@@ -19,15 +20,15 @@
       <div id="header">
         <div id="header-wrap">
           <nav>
-            <div id="logo">
+            <div id="nav-logo">
               text(<span class="ed">ed</span>)
             </div>
-            <div id="links">
+            <div id="nav-links">
               <span>Home</span>
               <span>Method</span>
               <span>About</span>
             </div>
-            <div id="contact">
+            <div id="nav-contact">
               <button>Contact</button>
             </div>
           </nav>
@@ -46,7 +47,12 @@
               <h1><span class="strong-purple">Text(</span><span class="ed-strong">ed</span><span class="strong-purple">) is fast and simple to use!</span></h1>
             </div>
             <div id="main-input-selector">
-              <h3><span class="round-steps">1</span> Select you option:</h3>
+              <div class="input-steps">
+                <div class="input-steps-round">
+                  <h3>1</h3>
+                </div>
+                <h3>Select you option:</h3>
+              </div>
             </div>
             <div id="main-input-selector-options">
               <div id="main-input-selector-options-readability" class="input-selector border-right border-radius-left">
@@ -59,7 +65,12 @@
               </div>
             </div>
             <div id="main-input-selector">
-              <h3><span class="round-steps">2</span> Type or copy-paste your text:</h3>
+              <div class="input-steps">
+                <div class="input-steps-round">
+                  <h3>2</h3>
+                </div>
+                <h3>Type or copy-paste your text:</h3>
+              </div>
             </div>
             <div id="main-input-text">
               <div id="main-input-textbox-1">
@@ -90,14 +101,14 @@
                 </p>
                 <p>
                   These formulas use mathematical calculations to produce a score. The score shows the relative difficulty on a continuum from easy (grade five or lower) to very hard (college level and above). <strong>Higher scores mean lower reading ease or lower readability.</strong>
-                  <a href="http://www.clearlanguagegroup.com/readability/" target="_blank" title="Learn More"><img src="../images/external-link.png"></a>
+                  <a href="http://www.clearlanguagegroup.com/readability/" target="_blank" title="Learn More"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </p>
                 <p>
                   This app calculates the score according to the <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank" title="Learn More">Coleman–Liau Index</a>:
                 </p>
                 <p>
                   The Coleman–Liau index is a readability test designed by Meri Coleman and T. L. Liau to gauge the understandability of a text. Like the Flesch–Kincaid Grade Level, Gunning fog index, SMOG index, and Automated Readability Index, <strong>its output approximates the U.S. grade level thought necessary to comprehend the text.</strong>
-                  <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank" title="Learn More"><img src="../images/external-link.png"></a>
+                  <a href="https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index" target="_blank" title="Learn More"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </p>
               </div>
               <div id="method-text-similarity" class="text-card mt-hide">
@@ -106,7 +117,7 @@
                 </div>
                 <p>
                   Measuring the similarity is of key importance in several natural processing applications including information retrieval, book recommendation, news categorization and essay scoring.
-                  <a href="https://www.aclweb.org/anthology/P18-1218.pdf" target="_blank" title="Learn More"><img src="../images/external-link.png"></a>
+                  <a href="https://www.aclweb.org/anthology/P18-1218.pdf" target="_blank" title="Learn More"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </p>
                 <p>
                   The texts can be similar in a) meaning or b) surface closeness. The first is referred to as <strong>semantic similarity</strong> and the latter is referred to as <strong>lexical similarity</strong>.
@@ -124,59 +135,80 @@
           <div id="about-contact">
             <div id="about">
               <div id="about-title">
-                <h1>About</h1>
+                About
               </div>
               <div id="about-text">
-                <p>Text(ed) is a web-based application that evaluates the readability and similarity of a text. The project was inspired by a problem set called "Readability" presented by the <a href="">CS50's program</a> in weeks 2 and 6.</p>
+                <h2>Text(ed) is a web-based application that evaluates the readability and similarity of a text.</h2>
+                <p>The project was inspired by a problem set called "Readability" presented by the <a href="https://cs50.harvard.edu/x/" target="_blank" title="Learn More">CS50's program</a> in weeks 2 and 6.</p>
                 <p>The application was built with the following <strong>technologies</strong>:</p>
-                <ul>
-                  <li>Python 3.8.2</li>
-                  <li>Flask 1.1.2</li>
-                  <li>Bootstrap 4</li>
-                  <li>JavaScript</li>
-                  <li>CSS 3</li>
-                  <li>HTML 5</li>
-                </ul>
+                <div id="about-tech-icons">
+                  <div class="about-tech-icons-text">
+                    <i class="fa-brands fa-python"></i>
+                    <div>Python and Flask</div>
+                  </div>
+                  <div class="about-tech-icons-text">
+                    <i class="fa-brands fa-js-square"></i>
+                    <div>JavaScript and JQuery</div>
+                  </div>
+                  <div class="about-tech-icons-text">
+                    <i class="fa-brands fa-html5"></i>
+                    <div>HTML 5</div>
+                  </div>
+                  <div class="about-tech-icons-text">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <div>CSS 3</div>
+                  </div>
+                  <div class="about-tech-icons-text">
+                    <i class="fa-brands fa-square-font-awesome"></i>
+                    <div>Font Awesome</div>
+                  </div>
+                </div>
                 <div id="license">
-                <p>MIT License. Copyright &copy; 2022 Wildson Seguchi.</p>
-                <p class="license-text">
-                    Permission is hereby granted, free of charge, to any person obtaining a copy
-                    of this software and associated documentation files (the "Software"), to deal
-                    in the Software without restriction, including without limitation the rights
-                    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-                    copies of the Software, and to permit persons to whom the Software is
-                    furnished to do so, subject to the following conditions:
-                    The above copyright notice and this permission notice shall be included in all
-                    copies or substantial portions of the Software.
-                    <br><br>
-                    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-                    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-                    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-                    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-                    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-                    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-                    SOFTWARE.</p>
+                  <p class="text-align-center">MIT License <a href="https://opensource.org/licenses/MIT" target="_blank" title="Learn More"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                  <!--
+                    <p class="license-text">
+                        Permission is hereby granted, free of charge, to any person obtaining a copy
+                        of this software and associated documentation files (the "Software"), to deal
+                        in the Software without restriction, including without limitation the rights
+                        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                        copies of the Software, and to permit persons to whom the Software is
+                        furnished to do so, subject to the following conditions:
+                        The above copyright notice and this permission notice shall be included in all
+                        copies or substantial portions of the Software.
+                        <br><br>
+                        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                        SOFTWARE.</p>
+                        -->
                 </div>
               </div>
             </div>
             <div id="contact">
               <div id="contact-title">
-                <h1>Contact</h1>
+                <div id="contact-title-text">Contact</div>
+                <div id="contact-green-ball"><img src="../images/contact-green-ball.png"></div>
               </div>
+              <h2>Don't hesitate to contact us for any information.</h2>
               <div class="container">
                 <form action="action_page.php">
-                  <div>
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  <div class="contact-input-flex">
+                    <label for="fname">Full Name</label>
+                    <input type="text" id="full-name" name="name" placeholder="Full Name">
                   </div>
-                  <div>
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                  <div class="contact-input-flex">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
                   </div>
-                  <label for="subject">Subject</label>
-                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                  <div>
-                    <input type="submit" value="Submit">
+                  <div class="contact-input-flex">
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Message" style="height:200px"></textarea>
+                  </div>
+                  <div class="contact-input-submit">
+                    <button class="btn-yellow" type="submit" value="Submit">SUBMIT</button>
                   </div>
                 </form>
               </div>
@@ -184,14 +216,16 @@
           </div>
           <div id="footer-bg"><img class="img-100" src="../images/footer-bg.png"></div>
           <div id="footer">
-            <div id="logo">
+            <div id="footer-logo">
               text(<span class="ed">ed</span>)
             </div>
             <div id="copyright">
               Copyright &copy; 2020 Wildson Seguchi. All rights reserved.
             </div>
             <div id="social-media">
-              img img img
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-discord"></i>
             </div>
           </div>
         </div>
