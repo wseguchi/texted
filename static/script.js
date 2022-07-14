@@ -1,3 +1,10 @@
+$(document).ready(function() {
+
+  });
+
+function pageScroll(id) {
+    $("html, body").animate({ scrollTop: $(id).offset().top }, 800);
+}
 
 function changeMethodVisibility(option) {
     if (option == 'readability') {

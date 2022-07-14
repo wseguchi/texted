@@ -4,6 +4,13 @@
 	box-sizing: border-box;
 }
 
+a,
+a:hover,
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
@@ -19,7 +26,6 @@ p {
 	align-items: center;
 	text-align: center;
 	background-image: linear-gradient(#44189a, #6426dd);
-	-background-image: linear-gradient(#6426dd, #44189a);
 }
 
 #header-bg-circles img {
@@ -36,13 +42,13 @@ nav {
 	color: white;
 	justify-content: space-between;
 	align-items: center;
-	-background-color: #4d1cb0
 }
 
 #nav-logo,
 #footer-logo {
 	font-weight: 500;
 	font-size: 1.2em;
+	cursor: pointer;
 }
 
 .ed {
@@ -93,7 +99,7 @@ button {
 	width: 100%;
 	align-items: center;
 	justify-content: space-around;
-	padding-top: 30px;
+	padding-top: 90px;
 
 }
 
@@ -269,7 +275,7 @@ button {
 }
 
 #about-text a {
-	color: #7037e1;
+	color: #404040;
 	font-weight: 500;
 	text-decoration: none;
 

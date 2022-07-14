@@ -24,43 +24,6 @@
                         and has a total of <strong>{% if item["letters"] == 1 %} one letter {% else %} {{ item["letters"] }} letters{% endif %}</strong>.<br><br>
                         <i class="fas fa-book-reader"></i> It should be easily understood by <span id="age{{ readability_dict.index(item) }}"></span> year olds.
                     </p>
-                    <script>
-                        var grade = "{{ item['result'] }}";
-
-                        if ( grade === "Before Grade 1" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "6 to 7";
-                        } else if ( grade === "Grade 2" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "7 to 8";
-                        } else if ( grade === "Grade 3" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "8 to 9";
-                        } else if ( grade === "Grade 4" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "9 to 10";
-                        } else if ( grade === "Grade 5" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "10 to 11";
-                        } else if ( grade === "Grade 6" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "11 to 12";
-                        } else if ( grade === "Grade 7" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "12 to 13";
-                        } else if ( grade === "Grade 8" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "13 to 14";
-                        } else if ( grade === "Grade 9" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "14 to 15";
-                        } else if ( grade === "Grade 10" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "15 to 16";
-                        } else if ( grade === "Grade 11" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "16 to 17";
-                        } else if ( grade === "Grade 12" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "17 to 18";
-                        } else if ( grade === "Grade 13" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "18 to 19";
-                        } else if ( grade === "Grade 14" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "19 to 20";
-                        } else if ( grade === "Grade 15" ){
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "20 to 21";
-                        } else {
-                            document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "21+";
-                        };
-                    </script>
                 </div>
             </div>
             {% endfor %}
@@ -75,25 +38,6 @@
             </div>
             <div id="lear_more" class="row d-flex justify-content-center p-0"><a href="/method">Learn more about Lexical Similarity.</a></div>
         </div>
-        <script>
-            var sab = {{ similarity }};
-            if (sab >= 90) {
-                $("#similarity_bar_color").addClass("bg-danger");
-                document.getElementById("similarity_bar_color").style.width = "{{ similarity }}%";
-            } else if (sab >= 70) {
-                $("#similarity_bar_color").addClass("bg-warning");
-                document.getElementById("similarity_bar_color").style.width = "{{ similarity }}%";
-            } else if (sab >= 50) {
-                $("#similarity_bar_color").addClass("");
-                document.getElementById("similarity_bar_color").style.width = "{{ similarity }}%";
-            } else if (sab >= 30) {
-                $("#similarity_bar_color").addClass("bg-info");
-                document.getElementById("similarity_bar_color").style.width = "{{ similarity }}%";
-            } else {
-                $("#similarity_bar_color").addClass("bg-success");
-                document.getElementById("similarity_bar_color").style.width = "{{ similarity }}%";
-            };
-        </script>
         {% endif %}
         <div class="d-flex justify-content-center mb-5">
             <button class="btn btn-purple" onclick="window.location.href='/#start'">Try another text <i class="fas fa-sync-alt icon_button"></i></button>
