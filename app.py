@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
-app.run(debug=True)
+app.run(debug=True) # Delete this line when publish the application
 
 # Ensure responses aren't cached
 @app.after_request
@@ -60,11 +60,3 @@ def result():
     # method == GET
     else:
         return render_template("index.html")
-
-@app.route("/method")
-def method():
-    return render_template("method.html")
-
-@app.route("/about")
-def about():
-    return render_template("about.html")

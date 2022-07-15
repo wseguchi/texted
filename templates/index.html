@@ -221,19 +221,20 @@
         </div>
         <h2>Don't hesitate to contact us for any information.</h2>
         <div class="container">
-          <form action="action_page.php">
+          <form action="https://formsubmit.co/wseguchi@gmail.com" method="POST">
             <div class="contact-input-flex">
               <label for="fname">Full Name</label>
-              <input type="text" id="full-name" name="name" placeholder="Full Name">
+              <input type="text" id="full-name" name="name" placeholder="Full Name" required>
             </div>
             <div class="contact-input-flex">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="Email">
+              <input type="email" id="email" name="email" placeholder="Email" required>
             </div>
             <div class="contact-input-flex">
               <label for="subject">Subject</label>
-              <textarea id="subject" name="subject" placeholder="Message" style="height:200px"></textarea>
+              <textarea id="subject" name="subject" placeholder="Message" style="height:200px" required></textarea>
             </div>
+            <input type="hidden" name="_subject" value="Texted | New Message">
             <div class="contact-input-submit">
               <button class="btn-yellow" type="submit" value="Submit">SUBMIT</button>
             </div>
@@ -250,9 +251,9 @@
         Copyright &copy; 2020 Wildson Seguchi. All rights reserved.
       </div>
       <div id="social-media">
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-brands fa-discord"></i>
+        <i class="fa-brands fa-linkedin" onclick="window.open('https://www.linkedin.com/in/wildson-seguchi')"></i>
+        <i class="fa-brands fa-github" onclick="window.open('https://github.com/wseguchi')"></i>
+        <i class="fa-brands fa-discord" onclick="window.open('https://discordapp.com/users/733873632593576039')"></i>
       </div>
     </div>
     </div>
