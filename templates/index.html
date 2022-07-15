@@ -38,125 +38,87 @@
           <button class="btn-green" onclick="pageScroll('#main-input-bg')">Try now <i class="fa-solid fa-lightbulb"></i></button>
         </div>
         <div id="header-main-content-image">
-          <img src="../static/books-main.svg" alt="Book with a lamp">
+          <img src="../static/img-books-main.svg" alt="Book with a lamp">
         </div>
       </div>
       <div id="header-bg-circles">
-        <img src="../static/bg-circle.png">
+        <img src="../static/img-bg-circle.png">
       </div>
     </div>
     <div id="header-bg-bottom">
-      <img class="img-100" src="../static/bg-header.png">
+      <img class="img-100" src="../static/img-bg-header.png">
     </div>
     <div id="feature">
       <div id="feature-readability" class="feature-cards">
         <i class="fa-solid fa-book-open-reader"></i>
         <h1>(<span class="strong-purple">read</span>)ability</h1>
-        <h3 class="card-text">Check <strong>readability</strong> to keep your content accessible and to maximize your audience readership.</h3>
+        <h3 class="card-text">Check <strong>readability</strong> to keep your content accessible and maximize your audience readership.</h3>
       </div>
       <div id="feature-similarity" class="feature-cards">
         <i class="fa-solid fa-copy"></i>
         <h1>(<span class="strong-purple">similar</span>)ity</h1>
-        <h3 class="card-text">Check the <strong>similarity</strong> between two texts to avoid redundancies and plagiarism.</h3>
+        <h3 class="card-text">Check <strong>similarity</strong> to avoid redundancies and plagiarism.</h3>
       </div>
     </div>
     <div id="main-input-bg">
-      <img class="img-100" src="../static/main-input-bg.png">
+      <img class="img-100" src="../static/img-main-input-bg.png">
     </div>
     <div id="main-input">
       <div id="main-input-title">
         <h1><span class="strong-purple">Text(</span><span class="ed-strong">ed</span><span class="strong-purple">) is fast and simple to use!</span></h1>
       </div>
-      <div id="main-input-selector">
+      <div id="main-input-selector-1" class="main-input-selector-cl">
         <div class="input-steps">
           <div class="input-steps-round">
             <h3>1</h3>
           </div>
-          <h3>Select you option:</h3>
+          <h3>Select the option you want to check:</h3>
+        </div>
+        <div id="warning-option" class="warning"><i class="fa-solid fa-triangle-exclamation"></i> Please select one of the options below!</div>
+        <div id="main-input-selector-options" value="">
+          <div id="main-input-selector-options-readability" class="input-selector border-right border-radius-left" onclick="selectMode('readability')">
+            <strong>READABILITY</strong><br>
+            <span class="subtitle">of one text</span>
+          </div>
+          <div id="main-input-selector-options-similarity" class="input-selector border-radius-right" onclick="selectMode('similarity')">
+            <strong>READABILITY & SIMILARITY</strong><br>
+            <span class="subtitle">between two texts</span>
+          </div>
         </div>
       </div>
-      <div id="main-input-selector-options">
-        <div id="main-input-selector-options-readability" class="input-selector border-right border-radius-left">
-          <strong>READABILITY</strong><br>
-          <span class="subtitle">of one text</span>
-        </div>
-        <div id="main-input-selector-options-similarity" class="input-selector border-radius-right">
-          <strong>READABILITY & SIMILARITY</strong><br>
-          <span class="subtitle">between two texts</span>
-        </div>
-      </div>
-      <div id="main-input-selector">
+      <div id="main-input-selector-2" class="main-input-selector-cl">
         <div class="input-steps">
           <div class="input-steps-round">
             <h3>2</h3>
           </div>
           <h3>Type or copy-paste your text:</h3>
         </div>
-      </div>
-      <form action="/result" method="post" onsubmit="return checkSubmitFunction()">
-        <div id="main-input-text">
-          <div id="main-input-textbox-1">
-            <textarea id="text-input-form-01" class="form-control text-input" name="text_input" placeholder="Type in or paste the text you want to check..."></textarea>
-          </div>
-          <div id="main-input-textbox-2">
-            <textarea id="text-input-form-02" class="form-control text-input" name="text_input" placeholder="Type in or paste the second text you want to check..."></textarea>
-          </div>
-      
-        </div>
-        <div id="main-input-selector">
-          <div class="input-steps">
-            <div class="input-steps-round">
-              <h3>3</h3>
+        <div id="warning-identical-texts" class="warning mb"><i class="fa-solid fa-person-falling-burst"></i> Oh... Identical texts! Please input different texts.</div>
+        <form action="/result" method="post" onsubmit="return checkSubmitFunction()">
+          <div id="main-input-text">
+            <div id="main-input-textbox-1">
+              <div id="warning-textbox-1" class="warning mb"><i class="fa-solid fa-triangle-exclamation"></i> Please, input your text!</div>
+              <textarea id="text-input-form-01" class="form-control text-input" name="text_input" placeholder="Type in or paste the text you want to check..."></textarea>
             </div>
-            <h3>That's it... Let's get Text(<span class="ed-strong">ed</span>).</h3>
+            <div id="main-input-textbox-2">
+              <div id="warning-textbox-2" class="warning mb"><i class="fa-solid fa-triangle-exclamation"></i> Please, input your second text!</div>
+              <textarea id="text-input-form-02" class="form-control text-input" name="text_input" placeholder="Type in or paste the second text you want to check..."></textarea>
+            </div>
           </div>
-        </div>
+      </div>
+      <div id="main-input-selector-3" class="main-input-selector-cl">
+      <div class="input-steps">
+      <div class="input-steps-round">
+      <h3>3</h3>
+      </div>
+      <h3>That's it... Let's get Text(<span class="ed-strong">ed</span>).</h3>
+      </div>
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox" name="inlineCheckbox" value="">
       <button class="btn-yellow" id="submit" type="submit"> GO <i class="fa-solid fa-play"></i></button>
       </form>
-    </div>
-    <!-- START OF RESULT DIV-->
-      <div id="result" class="">
-          <div id="result-readability-box">
-              {% for item in readability_dict %}
-              <div class="result-readability-individual">
-                  <h1 class="result_title"><i class="far fa-file-alt"></i> Text {{ (readability_dict.index(item) + 1) }}</h1>
-                  <div id="">
-                      <textarea id="text_input_01" class="form-control text-input" name="text_input" disabled>"{{ item["text"] }}"</textarea>
-                  </div>
-                  <div>
-                      <h1><i class="fas fa-book"></i> Readability Level: {{ item["result"] }}</h1>
-                  </div>
-                  <div>
-                      <p class="pl-3 pr-3">
-                          This text is <strong>{% if item["words"] == 1 %} one word {% else %} {{ item["words"] }} words{% endif %}</strong> long,
-                          contains <strong>{% if item["sentences"] == 1 %} one sentence {% else %} {{ item["sentences"] }} sentences{% endif %}</strong>
-                          and has a total of <strong>{% if item["letters"] == 1 %} one letter {% else %} {{ item["letters"] }} letters{% endif %}</strong>.<br><br>
-                          <i class="fas fa-book-reader"></i> It should be easily understood by <span id="age{{ readability_dict.index(item) }}"></span> year olds.
-                      </p>
-                  </div>
-              </div>
-              {% endfor %}
-              </div>
-          
-          {% if similarity != -1 %}
-          <div id="result-similarity">
-              <h1><i class="far fa-copy"></i> Similarity Level: {{ similarity }}%</h1>
-              <div id="similarity_bar" class="progress">
-                  <div id="similarity_bar_color" class="progress-bar progress-bar-striped progress-bar-animated">
-                      <!-- progress bar fill-->
-                  </div>
-              </div>
-              <div id="lear_more" class="row d-flex justify-content-center p-0"><a href="/method">Learn more about Lexical Similarity.</a></div>
-          </div>
-          {% endif %}
-          <div>
-            <button class="btn-yellow" onclick="window.location.href='/#start'">Try another text <i class="fas fa-sync-alt icon_button"></i></button>
-        </div>
-
-  
       </div>
-    <!-- END OF RESULT DIV -->
-    <div id="method-bg-top"><img class="img-100" src="../static/method-bg-top.png"></div>
+    </div>
+    <div id="method-bg-top"><img class="img-100" src="../static/img-method-bg-top.png"></div>
     <div id="method">
       <div id="method-title">
         <div id="method-title-readability" class="mt mt-active" onclick="changeMethodVisibility('readability')">
@@ -210,7 +172,7 @@
         </div>
       </div>
     </div>
-    <div id="method-bg-bottom"><img class="img-100" src="../static/method-bg-bottom.png"></div>
+    <div id="method-bg-bottom"><img class="img-100" src="../static/img-method-bg-bottom.png"></div>
     <div id="about-contact">
       <div id="about">
         <div id="about-title">
@@ -269,7 +231,7 @@
       <div id="contact">
         <div id="contact-title">
           <div id="contact-title-text">Contact</div>
-          <div id="contact-green-ball"><img src="../static/contact-green-ball.png"></div>
+          <!--<div id="contact-green-ball"><img src="../static/img-contact-green-ball.png"></div>-->
         </div>
         <h2>Don't hesitate to contact us for any information.</h2>
         <div class="container">
@@ -293,7 +255,7 @@
         </div>
       </div>
     </div>
-    <div id="footer-bg"><img class="img-100" src="../static/footer-bg.png"></div>
+    <div id="footer-bg"><img class="img-100" src="../static/img-footer-bg.png"></div>
     <div id="footer">
       <div id="footer-logo" onclick="pageScroll('#header')">
         text(<span class="ed">ed</span>)

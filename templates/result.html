@@ -1,47 +1,144 @@
-{% extends "layout.html" %}
-
-{% block title %}
-    Text(ed) | Result
-{% endblock %}
-
-{% block main %}
-<div class="container">
-    <div id="result_text_input" class="box-shadow mt-cust mb-cust">
-        <div class="row d-flex justify-content-center p-3">
-            {% for item in readability_dict %}
-            <div class="col">
-                <h1 class="result_title"><i class="far fa-file-alt"></i> Text {{ (readability_dict.index(item) + 1) }}</h1>
-                <div id="">
-                    <textarea id="text_input_01" class="form-control text-input" name="text_input" disabled>"{{ item["text"] }}"</textarea>
-                </div>
-                <div>
-                    <h1><i class="fas fa-book"></i> Readability Level: {{ item["result"] }}</h1>
-                </div>
-                <div>
-                    <p class="pl-3 pr-3">
-                        This text is <strong>{% if item["words"] == 1 %} one word {% else %} {{ item["words"] }} words{% endif %}</strong> long,
-                        contains <strong>{% if item["sentences"] == 1 %} one sentence {% else %} {{ item["sentences"] }} sentences{% endif %}</strong>
-                        and has a total of <strong>{% if item["letters"] == 1 %} one letter {% else %} {{ item["letters"] }} letters{% endif %}</strong>.<br><br>
-                        <i class="fas fa-book-reader"></i> It should be easily understood by <span id="age{{ readability_dict.index(item) }}"></span> year olds.
-                    </p>
-                </div>
-            </div>
-            {% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Text and readability app">
+    <meta name="keywords" content="education, text, read, readability, similarity, school, homework, lexical, coleman liau">
+    <meta name="author" content="Wildson Seguchi">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500&family=Poppins:wght@300;500&family=Questrial&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/56cc913de5.js" crossorigin="anonymous"></script>
+    <script src="../static/script.js" defer></script>
+    <title>You got Text(ed)! - Check your results</title>
+  </head>
+  <body>
+    <div id="header">
+      <nav>
+        <div id="nav-logo">
+          text(<span class="ed">ed</span>)
         </div>
-        {% if similarity != -1 %}
-        <div class="mt-5">
-            <h1><i class="far fa-copy"></i> Similarity Level: {{ similarity }}%</h1>
-            <div id="similarity_bar" class="progress">
-                <div id="similarity_bar_color" class="progress-bar progress-bar-striped progress-bar-animated">
-                    <!-- progress bar fill-->
-                </div>
-            </div>
-            <div id="lear_more" class="row d-flex justify-content-center p-0"><a href="/method">Learn more about Lexical Similarity.</a></div>
+        <div id="nav-links">
+          <span onclick="window.location.href='/'">Home</span>
+          <span onclick="window.location.href='/#method-bg-top'">Method</span>
+          <span onclick="window.location.href='/#about-contact'">About</span>
         </div>
-        {% endif %}
-        <div class="d-flex justify-content-center mb-5">
-            <button class="btn btn-purple" onclick="window.location.href='/#start'">Try another text <i class="fas fa-sync-alt icon_button"></i></button>
+        <div id="nav-contact">
+          <button onclick="window.location.href='/#about-contact'">Contact</button>
         </div>
+      </nav>
     </div>
-</div>
-{% endblock %}
+    <div id="result">
+      <div class="result-readability-box">
+        {% for item in readability_dict %}
+        <div class="result-readability-individual">
+          <h1 class="result_title"> text( <span class="ed-strong"> {{ (readability_dict.index(item) + 1) }}</span> )</h1>
+          <div id="">
+            <textarea id="text_input_01" class="form-control text-input" name="text_input" disabled>"{{ item["text"] }}"</textarea>
+          </div>
+          <div>
+            <h3><i class="fa-solid fa-graduation-cap"></i> Readability Level: </br><span class="ed-strong"> {{ item["result"] }}</span></h3>
+          </div>
+          <div>
+            <p class="">
+              <i class="fa-solid fa-lightbulb"></i> This text is <strong>{% if item["words"] == 1 %} one word {% else %} {{ item["words"] }} words{% endif %}</strong> long,
+              contains <strong>{% if item["sentences"] == 1 %} one sentence {% else %} {{ item["sentences"] }} sentences{% endif %}</strong>
+              and has a total of <strong>{% if item["letters"] == 1 %} one letter {% else %} {{ item["letters"] }} letters{% endif %}</strong>.<br><br>
+              It should be easily understood by <strong><span id="age{{ readability_dict.index(item) }}"></span> year olds</strong>.
+            </p>
+            <script>
+              var grade = "{{ item['result'] }}";
+              
+              if ( grade === "Before Grade 1" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "6 to 7";
+              } else if ( grade === "Grade 2" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "7 to 8";
+              } else if ( grade === "Grade 3" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "8 to 9";
+              } else if ( grade === "Grade 4" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "9 to 10";
+              } else if ( grade === "Grade 5" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "10 to 11";
+              } else if ( grade === "Grade 6" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "11 to 12";
+              } else if ( grade === "Grade 7" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "12 to 13";
+              } else if ( grade === "Grade 8" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "13 to 14";
+              } else if ( grade === "Grade 9" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "14 to 15";
+              } else if ( grade === "Grade 10" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "15 to 16";
+              } else if ( grade === "Grade 11" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "16 to 17";
+              } else if ( grade === "Grade 12" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "17 to 18";
+              } else if ( grade === "Grade 13" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "18 to 19";
+              } else if ( grade === "Grade 14" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "19 to 20";
+              } else if ( grade === "Grade 15" ){
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "20 to 21";
+              } else {
+                  document.getElementById("age{{ readability_dict.index(item) }}").innerHTML = "21+";
+              };
+            </script>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% if similarity != -1 %}
+      <div id="result-similarity">
+        <h1><i class="fa-solid fa-copy"></i> Similarity Level: {{ similarity }}%</h1>
+        <div id="similarity_bar" class="progress">
+          <div id="similarity_bar_color" class="progress-bar progress-bar-striped progress-bar-animated">
+            <!-- progress bar fill-->
+          </div>
+        </div>
+        <div id="lear_more" class="row d-flex justify-content-center p-0"><a href="/method">Learn more about Lexical Similarity.</a></div>
+      </div>
+      <script>
+        var sab = {{ similarity }};
+        if (sab >= 90) {
+            $("#similarity_bar_color").addClass("bg-danger");
+            document.getElementById("similarity_bar_color").style.width = "{{ similarity }}%";
+        } else if (sab >= 70) {
+            $("#similarity_bar_color").addClass("bg-warning");
+            document.getElementById("similarity_bar_color").style.width = "{{ similarity }}%";
+        } else if (sab >= 50) {
+            $("#similarity_bar_color").addClass("");
+            document.getElementById("similarity_bar_color").style.width = "{{ similarity }}%";
+        } else if (sab >= 30) {
+            $("#similarity_bar_color").addClass("bg-info");
+            document.getElementById("similarity_bar_color").style.width = "{{ similarity }}%";
+        } else {
+            $("#similarity_bar_color").addClass("bg-success");
+            document.getElementById("similarity_bar_color").style.width = "{{ similarity }}%";
+        };
+      </script>
+      {% endif %}
+      <div>
+        <button class="btn-yellow" onclick="window.location.href='/#feature'">Try another text <i class="fas fa-sync-alt icon_button"></i></button>
+      </div>
+    </div>
+    <div id="footer-bg"><img class="img-100" src="../static/img-footer-bg.png"></div>
+    <div id="footer">
+      <div id="footer-logo" onclick="pageScroll('#header')">
+        text(<span class="ed">ed</span>)
+      </div>
+      <div id="copyright">
+        Copyright &copy; 2020 Wildson Seguchi. All rights reserved.
+      </div>
+      <div id="social-media">
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-discord"></i>
+      </div>
+    </div>
+  </body>
+</html>

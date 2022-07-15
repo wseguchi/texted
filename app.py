@@ -55,7 +55,7 @@ def result():
                 similarity = abs(round((sab * 100) / 10) - 100)
         
         # return lists
-        return render_template("index.html", readability_dict=readability_dict, similarity=similarity)
+        return render_template("result.html", readability_dict=readability_dict, similarity=similarity)
     
     # method == GET
     else:
