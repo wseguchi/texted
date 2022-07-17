@@ -1,7 +1,3 @@
-$(document).ready(function() {
-
-});
-
 function pageScroll(id) {
 	$("html, body").animate({
 		scrollTop: $(id).offset().top
