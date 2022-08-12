@@ -5,13 +5,12 @@
 ## Welcome / Bem vindo!
 
 Thanks for checking out my front-end project.<br>
-🇧🇷/🇵🇹 *Obrigado por conferir meu projeto de front-end.*
-
+🇧🇷/🇵🇹 _Obrigado por conferir meu projeto de front-end._
 
 ## Overview
 
 Texted is a web-based application that evaluates the **readability** and the **similarity** of a text.<br>
-*Texted é um aplicativo web que avalia o 'grau de leitura' e a similaridade de um texto.*
+_Texted é um aplicativo web que avalia o 'grau de leitura' e a similaridade de um texto._
 
 ## Description
 
@@ -27,28 +26,29 @@ Texted is a web-based application that evaluates the **readability** and the **s
 
 The project was inspired by a problem set called "Readability" presented by the CS50's program in weeks 2 and 6.
 
-
 ## Technologies
 
 The project was created with:
-* Python 3.8.2
-* Flask 1.1.2
-* JavaScript (and Jquery)
-* CSS 3
-* HTML 5
 
+- Python 3.8.2
+- Flask 1.1.2
+- JavaScript (and Jquery)
+- CSS 3
+- HTML 5
 
 ## Usage
 
-1) Access the application: [Texted](http://texted.pythonanywhere.com/);
-2) Choose if you want to check one or two texts;
-3) Paste the text(s) you want to check;
-4) Click in the "Check" button to submit the text(s);
-5) Check the results. 
-
+1. Access the application: [Texted](http://texted.pythonanywhere.com/);
+2. Choose if you want to check one or two texts;
+3. Paste the text(s) you want to check;
+4. Click in the "Check" button to submit the text(s);
+5. Check the results.
 
 ## Credits
 
-Wildson Seguchi.
-Curitiba, Paraná, Brazil.
-July 2022.
+- Wildson Seguchi
+- [Github](https://github.com/wseguchi)
+- [LinkedIn](https://www.linkedin.com/in/wildson-seguchi/?locale=en_US)
+
+- Curitiba, Paraná, Brazil.
+- July 2022.
